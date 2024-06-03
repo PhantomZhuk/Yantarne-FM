@@ -4,6 +4,30 @@
     box-sizing: border-box;
 }
 
+.startScreen {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startDiodesContainer {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.startDiodes {
+    width: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
 .wrap {
     width: 100%;
     min-height: 100vh;
@@ -39,7 +63,6 @@ input {
 header {
     width: 100%;
     min-height: 10vh;
-    /* background-color: #999; */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -48,7 +71,7 @@ header {
 
 main {
     width: 100%;
-    height: 90vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
