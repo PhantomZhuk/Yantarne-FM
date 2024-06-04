@@ -6,7 +6,7 @@
 
 .startScreen {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
     background-color: #000;
     display: flex;
@@ -26,6 +26,7 @@
     width: 16px;
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0.1px 3px 10px #bdbdbd;
 }
 
 .wrap {
@@ -37,29 +38,6 @@
     align-items: center;
 }
 
-.btnPlay {
-    width: 100px;
-    height: 100px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px #999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-#pause {
-    display: none;
-}
-
-.wrap h2,
-input {
-    margin-top: 40px;
-}
-
 header {
     width: 100%;
     min-height: 10vh;
@@ -69,17 +47,8 @@ header {
     align-items: center;
 }
 
-main {
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .logo {
-    min-width: 250px;
+    max-width: 300px;
     min-height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -88,10 +57,7 @@ main {
 
 .logo img {
     width: 80px;
-}
-
-.logo h2 {
-    margin: 0;
+    margin-right: 10px;
 }
 
 menu ul {
@@ -101,15 +67,147 @@ menu ul {
 }
 
 menu ul li {
-    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+menu ul li a {
+    margin: 0 15px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
+    text-decoration: none;
+}
+
+.aMenu {
+    color: #000;
+}
+
+.aMenu:hover {
+    color: #999;
+}
+
+.headerBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.themeBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+}
+
+.menuBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #333;
+    margin: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menuContainer {
+    position: absolute;
+    width: 100%;
+    height: 87vh;
+    background-color: #333;
+    z-index: 2;
+    display: none;
+    bottom: 0;
+}
+
+.ulMenu {
+    list-style: none;
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.liMenu {
+    font-size: 20px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.liMenu:hover{
+    color: #999;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 30px 50px;
+}
+
+
+.volumeControlContainer {
+    width: 50px;
+    height: 200px;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative;
+    bottom: 50px; */
+}
+
+.inputContainer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#volumeControlBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 19px;
 }
 
 input[type=range] {
     -webkit-appearance: none;
     margin: 18px 0;
+    transform: rotate(270deg);
+    transition: 1s;
 }
 
 input[type=range]:focus {
@@ -131,7 +229,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 20px;
     width: 20px;
     border-radius: 3px;
-    background: #333;
+    background: #999;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -7px;
@@ -184,4 +282,74 @@ input[type=range]::-ms-thumb {
     border-radius: 3px;
     background: #ffffff;
     cursor: pointer;
+}
+
+.playContainer {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+#colo_1,
+#colo_2,
+#colo_3,
+#colo_4,
+#colo_5 {
+    border-radius: 50%;
+    border: 1px solid #333;
+    margin: 10px;
+    transition: 1s;
+}
+
+@keyframes marginColo {
+    0% {
+        margin: 10px;
+    }
+
+    50% {
+        margin: 25px;
+    }
+
+    100% {
+        margin: 10px;
+    }
+}
+
+@keyframes marginColo2 {    
+    100% {
+        margin: 10px;
+    }
+}
+
+.btnPlay {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+#pause {
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .menuBtn {
+        display: flex;
+    }
+
+    menu {
+        display: none;
+    }
 }

@@ -23,7 +23,7 @@
 
 <body>
 
-    <div class="startScreen">
+    <div class="startScreen" style="display: none;">
         <div class="startDiodesContainer">
             <div class="startDiodes startDiodes_1"></div>
             <div class="startDiodes startDiodes_2"></div>
@@ -44,22 +44,50 @@
                 <img src="./img/vinyl1.png" alt="">
                 <h2>Yantarne FM</h2>
             </div>
-            <menu>
+            <menu class="menu">
                 <ul>
-                    <li>Розклад</li>
-                    <li>Хто ми</li>
-                    <li>Партнери</li>
-                    <li>Контакти</li>
+                    <li><a href="#" class="aMenu">Розклад</a></li>
+                    <li><a href="#" class="aMenu">Хто ми</a></li>
+                    <li><a href="#" class="aMenu">Партнери</a></li>
+                    <li><a href="#" class="aMenu">Контакти</a></li>
                 </ul>
             </menu>
-        </header>
-        <main>
-            <div class="btnPlay">
-                <i class="fa-solid fa-play" id="playIcon"></i>
+            <div class="headerBtn">
+                <div class="themeBtn"><i class="fa-solid fa-sun" id="themeIcon"></i></div>
+                <div class="menuBtn"></div>
             </div>
-
-            <h2 id="trackTitle"></h2>
-            <input type="range" min="0" max="1" step="0.1" id="vol" value="0.5">
+        </header>
+        <div class="menuContainer">
+            <ul class="ulMenu">
+                <li class="liMenu"><a href="#">Розклад</a></li>
+                <li class="liMenu"><a href="#">Хто ми</a></li>
+                <li class="liMenu"><a href="#">Партнери</a></li>
+                <li class="liMenu"><a href="#">Контакти</a></li>
+            </ul>
+        </div>
+        <main>
+            <h2 id="trackTitle"><!--Lorem ipsum dolor sit amet.--></h2>
+            <div class="playContainer">
+                <div id="colo_1" class="colo">
+                    <div id="colo_2" class="colo">
+                        <div id="colo_3" class="colo">
+                            <div id="colo_4" class="colo">
+                                <div id="colo_5" class="colo">
+                                    <div class="btnPlay">
+                                        <i class="fa-solid fa-play" id="playIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="volumeControlContainer">
+                <div class="inputContainer">
+                    <input type="range" min="0" max="1" step="0.1" id="vol" value="0.5" id="volumeInput">
+                </div>
+                <button id="volumeControlBtn"><i class="fa-solid fa-volume-low" id="volCtrlIcon"></i></button>
+            </div>
         </main>
     </div>
 
