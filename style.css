@@ -417,33 +417,6 @@ header h2 {
     justify-content: space-between;
 }
 
-.whoWeArePage {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.whoWeArePage header {
-    width: 100%;
-    min-height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0 0 0;
-}
-
-.whoWeAreTxtContainer {
-    width: 100%;
-    min-height: 80vh;
-    padding:  0  100px 50px 100px;
-    font-size: 26px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .teamPage {
     width: 100%;
     min-height: 100vh;
@@ -692,7 +665,7 @@ hr {
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 830px){
     .menuBtn {
         display: flex;
     }
