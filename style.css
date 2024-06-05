@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99;
 }
 
 .startDiodesContainer {
@@ -30,6 +31,15 @@
 }
 
 .wrap {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homePage {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -120,6 +130,7 @@ menu ul li a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: #fff;
 }
 
 .menuContainer {
@@ -150,15 +161,11 @@ menu ul li a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: #fff;
-}
-
-.liMenu:hover{
-    color: #999;
 }
 
 ul li a {
     text-decoration: none;
+    color: #fff;
 }
 
 main {
@@ -292,7 +299,12 @@ input[type=range]::-ms-thumb {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 10px;
+    top: 60px;
+}
+
+#trackTitle {
+    position: relative;
+    top: 60px;
 }
 
 #colo_1,
@@ -343,6 +355,342 @@ input[type=range]::-ms-thumb {
 #pause {
     display: none;
 }
+
+.timetablePage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.timetablePage header {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+}
+
+header h2 {
+    font-size: 32px;
+}
+
+.ttbContainer {
+    width: 100%;
+    min-height: 80vh;
+    padding: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.ttBlock {
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 5px #333;
+    padding: 25px;
+    margin: 10px;
+}
+
+.circleDotBlock {
+    width: 10%;
+    height: 100%;
+}
+
+.circleDotBlock i {
+    font-size: 26px;
+}
+
+.ttTextBlock {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.whoWeArePage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.whoWeArePage header {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+}
+
+.whoWeAreTxtContainer {
+    width: 100%;
+    min-height: 80vh;
+    padding:  0  100px 50px 100px;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.teamPage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.teamPage header {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+}
+
+.teamContainer {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 100px;
+}
+
+.teamBlock {
+    width: 300px;
+    height: 420px;
+    box-shadow: 0 1px 5px #333;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.teamBlock:hover {
+    box-shadow: 0 2px 10px #333;
+}
+
+.teamBlock img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.teamTxtBlock {
+    width: 100%;
+    height: 139px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.teamTxtBlock p {
+    font-size: 18px;
+}
+
+.teamTxtBlock h3 {
+    font-size: 22px;
+}
+
+.teamTxtBlock a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.partnersPage {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.partnersPage header {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+}
+
+.partnersContainer {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 150px 150px 150px;
+}
+
+.partnersContainer a img {
+    width: 160px;
+}
+
+footer {
+    width: 100%;
+    min-height: 80vh; 
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 50px 30px 50px;
+    border-top: 1px solid #fff;
+}
+
+.topFooterBlock {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerTXtBlock {
+    width: 39%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerLogo h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.footerTXtBlock p {
+    color: #fff;
+    font-size: 28px;
+    width: 80%;
+}
+
+.navContainer {
+    width: 29%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navHeader {
+    width: 100%;
+    height: 5vh;
+}
+
+.navHeader h2 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.navBlocks {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navBlocks a{
+    width: 40%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+} 
+
+.navBlocks a:hover {
+    color: #a1a1a1;
+}
+
+.contactContainer {
+    width: 29%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contactHeader {
+    width: 100%;
+    height: 5vh;
+}
+
+.contactHeader h2 {
+    color: #fff;
+    font-size: 28px;
+}
+
+.contactBlocks {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contactBlocks a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.contactBlocks a:hover {
+    color: #a1a1a1;
+}
+
+.mesengersContainer {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mesengersContainer a{
+    text-decoration: none;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mesengersContainer a:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+hr {
+    margin: 50px 0 0 0;
+}
+
+.bottomFooterBlock{
+    width: 100%;
+    max-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+
 
 @media screen and (max-width: 800px){
     .menuBtn {

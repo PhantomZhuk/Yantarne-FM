@@ -23,7 +23,7 @@
 
 <body>
 
-    <div class="startScreen" style="display: none;">
+    <div class="startScreen"">
         <div class="startDiodesContainer">
             <div class="startDiodes startDiodes_1"></div>
             <div class="startDiodes startDiodes_2"></div>
@@ -39,56 +39,371 @@
     </div>
 
     <div class="wrap">
-        <header>
-            <div class="logo">
-                <img src="./img/vinyl1.png" alt="">
-                <h2>Yantarne FM</h2>
-            </div>
-            <menu class="menu">
-                <ul>
-                    <li><a href="#" class="aMenu">Розклад</a></li>
-                    <li><a href="#" class="aMenu">Хто ми</a></li>
-                    <li><a href="#" class="aMenu">Партнери</a></li>
-                    <li><a href="#" class="aMenu">Контакти</a></li>
+        <div class="homePage">
+            <header>
+                <div class="logo">
+                    <img src="./img/vinyl1.png" alt="">
+                    <h2>Yantarne FM</h2>
+                </div>
+                <menu class="menu">
+                    <ul>
+                        <li><a href="#" class="aMenu">Розклад</a></li>
+                        <li><a href="#" class="aMenu">Хто ми</a></li>
+                        <li><a href="#" class="aMenu">Партнери</a></li>
+                        <li><a href="#" class="aMenu">Контакти</a></li>
+                    </ul>
+                </menu>
+                <div class="headerBtn">
+                    <div class="themeBtn"><i class="fa-solid fa-sun" id="themeIcon"></i></div>
+                    <div class="menuBtn"><i class="fa-solid fa-bars"></i></div>
+                </div>
+            </header>
+            <div class="menuContainer">
+                <ul class="ulMenu">
+                    <li class="liMenu"><a href="#">Розклад</a></li>
+                    <li class="liMenu"><a href="#">Хто ми</a></li>
+                    <li class="liMenu"><a href="#">Партнери</a></li>
+                    <li class="liMenu"><a href="#">Контакти</a></li>
                 </ul>
-            </menu>
-            <div class="headerBtn">
-                <div class="themeBtn"><i class="fa-solid fa-sun" id="themeIcon"></i></div>
-                <div class="menuBtn"></div>
             </div>
-        </header>
-        <div class="menuContainer">
-            <ul class="ulMenu">
-                <li class="liMenu"><a href="#">Розклад</a></li>
-                <li class="liMenu"><a href="#">Хто ми</a></li>
-                <li class="liMenu"><a href="#">Партнери</a></li>
-                <li class="liMenu"><a href="#">Контакти</a></li>
-            </ul>
-        </div>
-        <main>
-            <h2 id="trackTitle"><!--Lorem ipsum dolor sit amet.--></h2>
-            <div class="playContainer">
-                <div id="colo_1" class="colo">
-                    <div id="colo_2" class="colo">
-                        <div id="colo_3" class="colo">
-                            <div id="colo_4" class="colo">
-                                <div id="colo_5" class="colo">
-                                    <div class="btnPlay">
-                                        <i class="fa-solid fa-play" id="playIcon"></i>
+            <main>
+                <div class="playContainer">
+                    <div id="colo_1" class="colo">
+                        <div id="colo_2" class="colo">
+                            <div id="colo_3" class="colo">
+                                <div id="colo_4" class="colo">
+                                    <div id="colo_5" class="colo">
+                                        <div class="btnPlay">
+                                            <i class="fa-solid fa-play" id="playIcon"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="volumeControlContainer">
-                <div class="inputContainer">
-                    <input type="range" min="0" max="1" step="0.1" id="vol" value="0.5" id="volumeInput">
+                <h2 id="trackTitle">Lorem ipsum dolor sit amet.</h2>
+                <div class="volumeControlContainer">
+                    <div class="inputContainer">
+                        <input type="range" min="0" max="1" step="0.1" id="vol" value="0.5" id="volumeInput">
+                    </div>
+                    <button id="volumeControlBtn"><i class="fa-solid fa-volume-low" id="volCtrlIcon"></i></button>
                 </div>
-                <button id="volumeControlBtn"><i class="fa-solid fa-volume-low" id="volCtrlIcon"></i></button>
+            </main>
+        </div>
+        <div class="timetablePage">
+            <header>
+                <h2>Розклад</h2>
+            </header>
+            <div class="ttbContainer">
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Найактуальніші новини міста, громади та країни щогодини!</h3>
+                        <p>
+                            З понеділка по п’ятницю ведучі новин Ірина Карвацька та Марія
+                            Канцелярист готують актуальнівипуски найважливіших подій міста,
+                            громади та країни
+                        </p>
+                        <p>
+                            Актуальні новини щогодини з <b>8:00</b> до <b>19:00</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Ранкове шоу «Не Спати» з Дмитром Дзіковським та Софією Труш!</h3>
+                        <p>
+                            Енергійне ранкове шоу з цікавими рубриками, актуальними темами, премʼєрами нових треків та
+                            спілкуванням з українськими зірками, що триває з 8:00 до 12:00
+                        </p>
+                        <p>
+                            Щобудня з <b>8:00</b> до <b>12:00</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Прямі ефіри з міським головою!</h3>
+                        <p>
+                            Розмова із міським головою, де мер у прямому ефірі відповідає на ті питання, що найбільше
+                            турбують мешканців громади
+                        </p>
+                        <p>
+                            Раз на <b>2-3</b> місяці
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Проєкт «Янтерв'ю»</h3>
+                        <p>
+                            У студію Yantarne.FM кожного тижня приходять представники влади, освіти, здоровʼя, спорту та
+                            інших структур громади. А також військові, волонтери, підприємці чи інші цікаві люди
+                            громади,
+                            які розповідають про себе та свою діяльність у форматі інтерв’ю
+                        </p>
+                        <p>
+                            Щотижня у <b>середу</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Авторські музичні мікси від DJ StasON!</h3>
+                        <p>
+                            Кожного вечора з понеділка по п'ятницю в ефірі звучать унікальні музичні мікси від DJ
+                            StasON. О
+                            21:00 стартує UKR MIX - ціла година сучасних українських хітів, а о 22:00 DANCE MIX -
+                            драйвовий
+                            музичний сет кращих закордонних хітів
+                        </p>
+                        <p>
+                            Щодня з <b>21:00</b> до <b>23:00</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>FDR Media: Топ-10 нових українських треків</h3>
+                        <p>
+                            Прем'єра Топ-10 найсвіжіших українських треків
+                        </p>
+                        <p>
+                            Кожної суботи о <b>17:00</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Проєкт «Слухоманія»</h3>
+                        <p>
+                            Кожної неділі українські музиканти представляють нові релізи та музику для своїх
+                            прихильників
+                        </p>
+                        <p>
+                            Щонеділі о <b>12:00</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Радіо Чарт Топ-40</h3>
+                        <p>
+                            Українські музиканти діляться найновішою музикою! Рейтинг найротованіших пісень українського
+                            радіопростору
+                        </p>
+                        <p>
+                            Кожної неділі о <b>16:00</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="ttBlock">
+                    <div class="circleDotBlock">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div class="ttTextBlock">
+                        <h3>Проєкт «Життя за тебе»!</h3>
+                        <p>
+                            Кожної п'ятниці о 18:30 в ефірі важливий проєкт про історії героїв, які віддали своє життя
+                            за
+                            Україну
+                        </p>
+                        <p>
+                            Щоп'ятниці о <b>18:30</b>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </main>
+        </div>
+        <div class="whoWeArePage">
+            <header>
+                <h2>Xто ми</h2>
+            </header>
+            <div class="whoWeAreTxtContainer">
+                <p>
+                    Все почалось у 2021 році! Один творчий чоловік на імʼя Андрій Стасишин зібрав команду ентузіастів і
+                    заснував перше онлайн радіо рідного міста Новояворівська Yantarne.FM!
+                </p>
+                <p>
+                    З початком повномасштабного вторгнення, отримали дозвіл від Армії.FM та Національної ради теле- та
+                    радіозвʼязку на тимчасове мовлення на частоті 88.9! Щиро дякуємо Армії.FM та Національній раді за
+                    довіру!
+                </p>
+                <p>
+                    З того часу, щодня багато працювали і розвивались! Всього навчились самі, були сміливими мрійниками
+                    і
+                    всього лише за один рік закріпились як молода, але сильна команда з великими амбіціями!
+                </p>
+                <ul>
+                    <li>Створили сучасну професійну студію!</li>
+                    <li>Маємо нетиповий музичний плейлист, який заходить будь-кому хто вибирає слухати якісне, нове,
+                        сучасне іукраїнське!</li>
+                    <li>Знайшли свій динамічний формат ведення етерів!</li>
+                    <li>Готуємо найактуальніші новини та оперативно інформуємо про все найголовніше в громаді!</li>
+                    <li>Робимо ексклюзивні локальні, соціальні, музичні та авторські проєкти!</li>
+                    <li>Знайомимось із кращими українськими артистами, а також підтримуємо молодих і амбітних
+                        виконавців!</li>
+                </ul>
+                <p>
+                    У грудні 2023 року, ми дійшли до ще однієї з цілей - мовити на власній fm-частоті! Тому сьогодні ти
+                    слухаєш радіо рідного міста на 97.6!
+                </p>
+            </div>
+        </div>
+        <div class="teamPage">
+            <header>
+                <h2>
+                    Команда
+                </h2>
+            </header>
+            <div class="teamContainer">
+                <div class="teamBlock">
+                    <img src="https://yantarne.fm/img/team/andriy-stasishin.webp" alt="">
+                    <div class="teamTxtBlock">
+                        <p>Директор та муз. редактор</p>
+                        <h3>Андрій Стасишин</h3>
+                        <a href="#">INSTAGRAM</a>
+                    </div>
+                </div>
+                <div class="teamBlock">
+                    <img src="https://yantarne.fm/img/team/member-4.webp" alt="">
+                    <div class="teamTxtBlock">
+                        <p>Програмний директор, ведуча</p>
+                        <h3>Софія Труш</h3>
+                        <a href="#">INSTAGRAM</a>
+                    </div>
+                </div>
+                <div class="teamBlock">
+                    <img src="https://yantarne.fm/img/team/dmytro-dzikovskyi.webp" alt="">
+                    <div class="teamTxtBlock">
+                        <p>Ведучий ранкового шоу</p>
+                        <h3>Дмитро Дзіковський</h3>
+                        <a href="#">INSTAGRAM</a>
+                    </div>
+                </div>
+                <div class="teamBlock">
+                    <img src="https://yantarne.fm/img/team/member-5.webp" alt="">
+                    <div class="teamTxtBlock">
+                        <p>Ведуча новин</p>
+                        <h3>Ірина Карвацька</h3>
+                        <a href="#">INSTAGRAM</a>
+                    </div>
+                </div>
+                <div class="teamBlock">
+                    <img src="https://yantarne.fm/img/team/member-3.webp" alt="">
+                    <div class="teamTxtBlock">
+                        <p>Ведуча новин</p>
+                        <h3>Марія Канцелярист</h3>
+                        <a href="#">INSTAGRAM</a>
+                    </div>
+                </div>
+                <div class="teamBlock">
+                    <img src="https://yantarne.fm/img/team/taras-fedun.webp" alt="">
+                    <div class="teamTxtBlock">
+                        <p>Ведучий</p>
+                        <h3>Тарас Федунь</h3>
+                        <a href="#">INSTAGRAM</a>
+                    </div>
+                </div>
+                <div class="teamBlock">
+                    <img src="https://yantarne.fm/img/team/member-2.webp" alt="">
+                    <div class="teamTxtBlock">
+                        <p>Менеджер по рекламі</p>
+                        <h3>Юрій Калагурка</h3>
+                        <a href="#">INSTAGRAM</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="partnersPage">
+            <header>
+                <h2>Партнери</h2>
+            </header>
+            <div class="partnersContainer">
+                <a href="#">
+                    <img src="https://yantarne.fm/img/partners/img1.webp" alt="">
+                </a>
+                <a href="#">
+                    <img src="https://yantarne.fm/img/partners/img2.webp" alt="">
+                </a>
+                <a href="#">
+                    <img src="https://yantarne.fm/img/partners/img3.webp" alt="">
+                </a>
+                <a href="#">
+                    <img src="https://yantarne.fm/img/partners/img4.webp" alt="">
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div class="topFooterBlock">
+                <div class="footerTXtBlock">
+                    <div class="footerLogo">
+                        <h2>Yantarne FM</h2>
+                    </div>
+                    <p>Якщо у вас є новина, якою хочете поділитися - надсилайте нам, якщо ви хочете стати частинкою
+                        команди
+                        або маєте класні ідеї - пишіть нам. Якщо у вас виникли запитання стосовно реклами та співпраці -
+                        телефонуйте!</p>
+                </div>
+                <div class="navContainer">
+                    <div class="navHeader">
+                        <h2>Навігація</h2>
+                    </div>
+                    <div class="navBlocks">
+                        <a href="#">Розклад ефірів</a>
+                        <a href="#">Хто ми</a>
+                        <a href="#">Команда</a>
+                        <a href="#">Партнери</a>
+                    </div>
+                </div>
+                <div class="contactContainer">
+                    <div class="contactHeader">
+                        <h2>Контакти</h2>
+                    </div>
+                    <div class="contactBlocks">
+                        <a href="#">Розклад ефірів</a>
+                        <a href="#"><i class="fa-regular fa-envelope"></i> yantarne.fm@gmail.com</a>
+                        <a href="#"><i class="fa-solid fa-phone-volume"></i> +380982008688- студія</a>
+                        <a href="#"><i class="fa-solid fa-phone-volume"></i> +380683020555- реклама</a>
+                        <div class="mesengersContainer">
+                            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="soundcloud"><i class="fa-brands fa-soundcloud"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bottomFooterBlock">
+                <p>2024 Усі права захищені</p>
+            </div>
+        </footer>
     </div>
 
     <script src="./main.js"></script>

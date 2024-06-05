@@ -81,7 +81,7 @@ function startupScreenAnimation() {
     }, 3600);
 }
 
-// startupScreenAnimation();
+startupScreenAnimation();
 
 $(`.btnPlay`).click(() => {
     axios.get(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
@@ -198,11 +198,15 @@ if (theme == 'light') {
     $(`.themeBtn`).css(`color`, `#fff`);
     $(`#volumeControlBtn`).css(`background-color`, `#333`);
     $(`#volumeControlBtn`).css(`color`, `#fff`);
+    $(`.menuBtn`).css(`background-color`, `#333`);
+    $(`.menuBtn`).css(`color`, `#fff`);
     $(`#colo_1`).css(`border`, `1px solid #333`);
     $(`#colo_2`).css(`border`, `1px solid #333`);
     $(`#colo_3`).css(`border`, `1px solid #333`);
     $(`#colo_4`).css(`border`, `1px solid #333`);
     $(`#colo_5`).css(`border`, `1px solid #333`);
+    $(`.ttBlock`).css(`box-shadow`, `0 1px 5px #333`);
+    $(`.teamBlock`).css(`box-shadow`, `0 1px 5px #333`);
     $(`#themeIcon`).removeClass(`fa-moon`);
     $(`#themeIcon`).addClass(`fa-sun`);
 } else if (theme == `dark`) {
@@ -213,11 +217,15 @@ if (theme == 'light') {
     $(`.themeBtn`).css(`color`, `#333`);
     $(`#volumeControlBtn`).css(`background-color`, `#fff`);
     $(`#volumeControlBtn`).css(`color`, `#333`);
+    $(`.menuBtn`).css(`background-color`, `#fff`);
+    $(`.menuBtn`).css(`color`, `#333`);
     $(`#colo_1`).css(`border`, `1px solid #fff`);
     $(`#colo_2`).css(`border`, `1px solid #fff`);
     $(`#colo_3`).css(`border`, `1px solid #fff`);
     $(`#colo_4`).css(`border`, `1px solid #fff`);
     $(`#colo_5`).css(`border`, `1px solid #fff`);
+    $(`.ttBlock`).css(`box-shadow`, `0 1px 5px #fff`);
+    $(`.teamBlock`).css(`box-shadow`, `0 1px 5px #fff`);
     $(`#themeIcon`).removeClass(`fa-sun`);
     $(`#themeIcon`).addClass(`fa-moon`);
 }
@@ -236,6 +244,10 @@ $(`.themeBtn`).click(() => {
         $(`#colo_3`).css(`border`, `1px solid #fff`);
         $(`#colo_4`).css(`border`, `1px solid #fff`);
         $(`#colo_5`).css(`border`, `1px solid #fff`);
+        $(`.menuBtn`).css(`background-color`, `#fff`);
+        $(`.menuBtn`).css(`color`, `#333`);
+        $(`.ttBlock`).css(`box-shadow`, `0 1px 5px #fff`);
+        $(`.teamBlock`).css(`box-shadow`, `0 1px 5px #fff`);
         $(`#themeIcon`).removeClass(`fa-sun`);
         $(`#themeIcon`).addClass(`fa-moon`);
         localStorage.setItem('theme', 'dark');
@@ -248,11 +260,15 @@ $(`.themeBtn`).click(() => {
         $(`.themeBtn`).css(`color`, `#fff`);
         $(`#volumeControlBtn`).css(`background-color`, `#333`);
         $(`#volumeControlBtn`).css(`color`, `#fff`);
+        $(`.menuBtn`).css(`background-color`, `#333`);
+        $(`.menuBtn`).css(`color`, `#fff`);
         $(`#colo_1`).css(`border`, `1px solid #333`);
         $(`#colo_2`).css(`border`, `1px solid #333`);
         $(`#colo_3`).css(`border`, `1px solid #333`);
         $(`#colo_4`).css(`border`, `1px solid #333`);
         $(`#colo_5`).css(`border`, `1px solid #333`);
+        $(`.ttBlock`).css(`box-shadow`, `0 1px 5px #333`);
+        $(`.teamBlock`).css(`box-shadow`, `0 1px 5px #333`);
         $(`#themeIcon`).removeClass(`fa-moon`);
         $(`#themeIcon`).addClass(`fa-sun`);
         localStorage.setItem('theme', 'light');
