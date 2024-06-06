@@ -1,9 +1,9 @@
-// setInterval(() => {
-//     axios.get(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
-//         .then(res => {
-//             $(`#trackTitle`).text(res.data.icestats.source.title)
-//         })
-// }, 500);
+setInterval(() => {
+    axios.get(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
+        .then(res => {
+            $(`#trackTitle`).text(res.data.icestats.source.title)
+        })
+}, 500);
 
 let audio = new Audio();
 let currentVol = 0.5;
@@ -14,7 +14,6 @@ let stDiodeHgt = `0px`;
 let endDiodeHgt = `120px`;
 
 function startupScreenAnimation() {
-    $(`.wrap`).hide();
     setTimeout(() => {
         $(`.startDiodes_1`).animate({ height: endDiodeHgt }, "slow")
         $(`.startDiodes_1`).animate({ height: stDiodeHgt }, "slow")
@@ -77,7 +76,6 @@ function startupScreenAnimation() {
     }, 1180);
     setTimeout(() => {
         $(`.startScreen`).hide();
-        $(`.wrap`).show();
     }, 3600);
 }
 
@@ -179,9 +177,17 @@ let menuContainerOpen = false;
 $(`.menuBtn`).click(() => {
     if (menuContainerOpen == false) {
         $(`.menuContainer`).show();
+        $(`.timetablePage`).hide();
+        $(`.teamPage`).hide();
+        $(`.partnersPage`).hide();
+        $(`footer`).hide();
         menuContainerOpen = true;
     } else {
         $(`.menuContainer`).hide();
+        $(`.timetablePage`).show();
+        $(`.teamPage`).show();
+        $(`.partnersPage`).show();
+        $(`footer`).show();
         menuContainerOpen = false
     }
 });
@@ -274,4 +280,13 @@ $(`.themeBtn`).click(() => {
         localStorage.setItem('theme', 'light');
         theme = 'light'
     }
+});
+
+$(`.liMenu`).click(() => {
+    $(`.menuContainer`).hide();
+        $(`.timetablePage`).show();
+        $(`.teamPage`).show();
+        $(`.partnersPage`).show();
+        $(`footer`).show();
+        menuContainerOpen = false
 });

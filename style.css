@@ -7,7 +7,7 @@
 .startScreen {
     width: 100%;
     min-height: 100vh;
-    position: absolute;
+    position: fixed;
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -134,9 +134,9 @@ menu ul li a {
 }
 
 .menuContainer {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 87vh;
+    height: 80vh;
     background-color: #333;
     z-index: 2;
     display: none;
@@ -157,15 +157,17 @@ menu ul li a {
     font-size: 20px;
     width: 100%;
     height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 
 ul li a {
     text-decoration: none;
     color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -187,8 +189,6 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* position: relative;
-    bottom: 50px; */
 }
 
 .inputContainer {
@@ -391,7 +391,7 @@ header h2 {
 
 .ttBlock {
     width: 500px;
-    height: 200px;
+    min-height: 200px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -401,7 +401,7 @@ header h2 {
 }
 
 .circleDotBlock {
-    width: 10%;
+    width: 15%;
     height: 100%;
 }
 
@@ -410,7 +410,7 @@ header h2 {
 }
 
 .ttTextBlock {
-    width: 90%;
+    width: 85%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -512,7 +512,7 @@ header h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 150px 150px 150px;
+    padding: 20px 130px 150px 130px;
 }
 
 .partnersContainer a img {
@@ -539,7 +539,7 @@ footer {
 
 .footerTXtBlock {
     width: 39%;
-    min-height: 40vh;
+    max-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -547,27 +547,26 @@ footer {
 
 .footerLogo h2 {
     color: #fff;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 900;
 }
 
 .footerTXtBlock p {
     color: #fff;
-    font-size: 28px;
+    font-size: calc(15px + 0.9vw);
     width: 80%;
 }
 
 .navContainer {
-    width: 29%;
-    min-height: 40vh;
+    width: 28%;
+    max-height: 40vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .navHeader {
-    width: 100%;
     height: 5vh;
+    margin-bottom: 50px;
 }
 
 .navHeader h2 {
@@ -576,14 +575,13 @@ footer {
 }
 
 .navBlocks {
-    height: 30vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .navBlocks a{
-    width: 40%;
     text-decoration: none;
     color: #fff;
     font-size: 24px;
@@ -594,15 +592,14 @@ footer {
 }
 
 .contactContainer {
-    width: 29%;
-    min-height: 40vh;
+    width: 33%;
+    max-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .contactHeader {
-    width: 100%;
     height: 5vh;
 }
 
@@ -629,8 +626,10 @@ footer {
 
 .mesengersContainer {
     width: 70%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .mesengersContainer a{
@@ -662,8 +661,55 @@ hr {
     align-items: center;
     color: #fff;
     font-size: 18px;
+    padding-top: 20px;
 }
 
+@media screen and (max-width: 1000px){
+    .teamContainer {
+        padding: 20px 25px;
+    }
+
+    .partnersContainer {
+        padding: 20px 50px 150px 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .partnersContainer a img {
+        margin: 20px;
+        scrollbar-width: none;
+    }
+
+    .topFooterBlock {
+        flex-direction: column;
+    }
+
+    .footerTXtBlock {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .footerTXtBlock p {
+        width: 100%;
+    }
+
+    .navContainer {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .contactContainer {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .mesengersContainer {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 830px){
     .menuBtn {
@@ -672,5 +718,27 @@ hr {
 
     menu {
         display: none;
+    }
+
+    .ttbContainer {
+        padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    header h2 {
+        font-size: 22px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    #trackTitle {
+        font-size: 20px;
+    }
+
+    .contactBlocks a {
+        font-size: 20px;
     }
 }
