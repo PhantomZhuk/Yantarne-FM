@@ -1,9 +1,40 @@
-setInterval(() => {
-    axios.get(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
-        .then(res => {
-            $(`#trackTitle`).text(res.data.icestats.source.title)
-        })
-}, 500);
+if ($.cookie(`openCookiePopup`) === undefined) {
+    $.cookie(`openCookiePopup`, `true`);
+}
+
+if ($.cookie(`agreedCookies`) === undefined) {
+    $.cookie(`agreedCookies`, `false`);
+}
+
+let openCookiePopup = $.cookie(`openCookiePopup`);
+
+if (openCookiePopup == `true`) {
+    $(`.cookiePopup`).css(`display`, `flex`);
+} else if (openCookiePopup == `false`) {
+    $(`.cookiePopup`).css(`display`, `none`);
+}
+
+$(`.cookieAgreed, .cookieRefuse`).click(() => {
+    if (openCookiePopup == `true`) {
+        $(`.cookiePopup`).css(`display`, `none`);
+        $.cookie(`openCookiePopup`, `false`)
+    }
+});
+
+$(`.cookieAgreed`).click(()=>{
+    $.cookie(`agreedCookies`, `true`)
+});
+
+$(`.cookieRefuse`).click(()=>{
+    $.cookie(`agreedCookies`, `false`)
+});
+
+// setInterval(() => {
+//     axios.get(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
+//         .then(res => {
+//             $(`#trackTitle`).text(res.data.icestats.source.title)
+//         })
+// }, 500);
 
 let audio = new Audio();
 let currentVol = 0.5;
@@ -284,9 +315,9 @@ $(`.themeBtn`).click(() => {
 
 $(`.liMenu`).click(() => {
     $(`.menuContainer`).hide();
-        $(`.timetablePage`).show();
-        $(`.teamPage`).show();
-        $(`.partnersPage`).show();
-        $(`footer`).show();
-        menuContainerOpen = false
+    $(`.timetablePage`).show();
+    $(`.teamPage`).show();
+    $(`.partnersPage`).show();
+    $(`footer`).show();
+    menuContainerOpen = false
 });
