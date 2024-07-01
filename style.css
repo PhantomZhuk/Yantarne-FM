@@ -94,6 +94,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-image: url(./img/themeFon.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
 }
 
 header {
@@ -103,6 +107,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.homeHeader {
+    background-color: rgba(51, 51, 51, 0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 0 0 50px 50px;
 }
 
 .logo {
@@ -136,14 +146,6 @@ menu ul li a {
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
-}
-
-.aMenu {
-    color: #000;
-}
-
-.aMenu:hover {
-    color: #999;
 }
 
 .headerBtn {
@@ -184,7 +186,7 @@ menu ul li a {
 .menuContainer {
     position: fixed;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: #333;
     z-index: 2;
     display: none;
@@ -216,6 +218,78 @@ ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.themesContainer {
+    position: fixed;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    right: -200px;
+    top: 120px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    z-index: 1111;
+    background-color: rgba(51, 51, 51, 0.3);
+    backdrop-filter: blur(12px);
+}
+
+.themeItem {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#light {
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.themeColoLight {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+#green {
+    background-color: #27bf27;
+}
+
+#red {
+    background-color: #eb3838;
+}
+
+#orange {
+    background-color: #ff7518;
+}
+
+#blue {
+    background-color: #4322ed;
+}
+
+#dark {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.themeColoDark {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 main {
@@ -353,6 +427,10 @@ input[type=range]::-ms-thumb {
 #trackTitle {
     position: relative;
     top: 60px;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
 }
 
 #colo_1,
@@ -361,7 +439,7 @@ input[type=range]::-ms-thumb {
 #colo_4,
 #colo_5 {
     border-radius: 50%;
-    border: 1px solid #333;
+    border: 2px solid #fff;
     margin: 10px;
     transition: 1s;
 }
@@ -380,7 +458,7 @@ input[type=range]::-ms-thumb {
     }
 }
 
-@keyframes marginColo2 {    
+@keyframes marginColo2 {
     100% {
         margin: 10px;
     }
@@ -392,7 +470,7 @@ input[type=range]::-ms-thumb {
     background-color: #333;
     color: #fff;
     border-radius: 50%;
-    box-shadow: 0 5px 10px #999;
+    box-shadow: 0 0.1px 10px #999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -463,6 +541,10 @@ header h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.ttTextBlock h3 {
+    color: #000;
 }
 
 .teamPage {
@@ -569,7 +651,7 @@ header h2 {
 
 footer {
     width: 100%;
-    min-height: 80vh; 
+    min-height: 80vh;
     background-color: #333;
     display: flex;
     flex-direction: column;
@@ -629,11 +711,11 @@ footer {
     justify-content: space-between;
 }
 
-.navBlocks a{
+.navBlocks a {
     text-decoration: none;
     color: #fff;
     font-size: 24px;
-} 
+}
 
 .navBlocks a:hover {
     color: #a1a1a1;
@@ -662,6 +744,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .contactBlocks a {
     text-decoration: none;
     color: #fff;
@@ -680,7 +763,7 @@ footer {
     align-items: center;
 }
 
-.mesengersContainer a{
+.mesengersContainer a {
     text-decoration: none;
     color: #333;
     width: 50px;
@@ -701,7 +784,7 @@ hr {
     margin: 50px 0 0 0;
 }
 
-.bottomFooterBlock{
+.bottomFooterBlock {
     width: 100%;
     max-height: 10vh;
     display: flex;
@@ -712,7 +795,7 @@ hr {
     padding-top: 20px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
     .teamContainer {
         padding: 20px 25px;
     }
@@ -759,7 +842,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 830px){
+@media screen and (max-width: 830px) {
     .menuBtn {
         display: flex;
     }
@@ -773,7 +856,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
     header h2 {
         font-size: 22px;
     }
