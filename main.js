@@ -444,36 +444,233 @@ function topicVerification() {
     }
 }
 
-function setTheme(theme) {
-    $.cookie('theme', theme);
-    topicVerification();
-    location.reload()
-}
+topicVerification();
 
-$(document).ready(function() {
-    topicVerification();
-
-    $('#light').click(function() {
-        setTheme('light');
+$('#light').click(function () {
+    $.cookie('theme', 'light');
+    $('.homeHeader').css('background-color', '');
+    $('.homePage').css('background-image', 'url(./img/themeFon.jpg)');
+    $('.wrap').css('background-color', lightColor);
+    $('.wrap').css('color', darkColor);
+    $('.teamTxtBlock a').css('color', darkColor);
+    $('.ttTextBlock h3').css('color', darkColor);
+    $('.themeBtn').css('background-color', darkColor);
+    $('.themeBtn').css('color', lightColor);
+    $('#volumeControlBtn').css('background-color', darkColor);
+    $('#volumeControlBtn').css('color', lightColor);
+    $('.menuBtn').css('background-color', darkColor);
+    $('.menuBtn').css('color', lightColor);
+    $('#colo_1').css('border', '2px solid ' + darkColor);
+    $('#colo_2').css('border', '2px solid ' + darkColor);
+    $('#colo_3').css('border', '2px solid ' + darkColor);
+    $('#colo_4').css('border', '2px solid ' + darkColor);
+    $('#colo_5').css('border', '2px solid ' + darkColor);
+    $('.ttBlock').css('box-shadow', '0 1px 5px ' + darkColor);
+    $('.teamBlock').css('box-shadow', '0 1px 5px ' + darkColor);
+    $('.btnPlay').css('background-color', darkColor);
+    $('.circleDotBlock i').css('color', darkColor);
+    $('.navBlocks a').hover(function () {
+        $(this).css('color', '#a1a1a1');
+    }, function () {
+        $(this).css('color', '');
     });
 
-    $('#green').click(function() {
-        setTheme('green');
+    $('.contactBlocks a').hover(function () {
+        $(this).css('color', '#a1a1a1');
+    }, function () {
+        $(this).css('color', '');
     });
 
-    $('#red').click(function() {
-        setTheme('red');
+    $('.mesengersContainer a').hover(function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '#a1a1a1');
+    }, function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '');
+    });
+});
+
+$('#green').click(function () {
+    $.cookie('theme', 'green');
+    $('.homePage').css('background-image', 'url(./img/greenThemeFon.jpg)');
+    $('.startDiodes').css('background-color', greenColor);
+    $('.startDiodes').css('box-shadow', '0.1px 3px 10px #1b8b1b');
+    $('.homeHeader').css('background-color', 'rgba(39, 191, 39, 0.1)');
+    $('.homeHeader').css('color', '#fff');
+    $('.themeBtn').css('background-color', greenBackgroundColor);
+    $('.menuBtn').css('background-color', greenBackgroundColor);
+    $('.btnPlay').css('background-color', greenBackgroundColor);
+    $('#volumeControlBtn').css('background-color', greenBackgroundColor);
+    $('.circleDotBlock i').css('color', greenDarkColor);
+    $('.ttTextBlock h3').css('color', greenDarkColor);
+    $('.teamTxtBlock a').css('color', greenColor);
+    $('.navBlocks a').hover(function () {
+        $(this).css('color', greenColor);
+    }, function () {
+        $(this).css('color', '');
     });
 
-    $('#orange').click(function() {
-        setTheme('orange');
+    $('.contactBlocks a').hover(function () {
+        $(this).css('color', greenColor);
+    }, function () {
+        $(this).css('color', '');
     });
 
-    $('#blue').click(function() {
-        setTheme('blue');
+    $('.mesengersContainer a').hover(function () {
+        $(this).css('color', '');
+        $(this).css('background-color', greenDarkColor);
+    }, function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '');
+    });
+});
+
+$('#red').click(function () {
+    $.cookie('theme', 'red');
+    $('.homePage').css('background-image', 'url(./img/redThemeFon.jpg)');
+    $('.startDiodes').css('background-color', redColor);
+    $('.startDiodes').css('box-shadow', '0.1px 3px 10px' + redBackgroundColor);
+    $('.homeHeader').css('background-color', 'rgba(51, 51, 51, 0.3)');
+    $('.homeHeader').css('color', '#fff');
+    $('.themeBtn').css('background-color', redBackgroundColor);
+    $('.menuBtn').css('background-color', redBackgroundColor);
+    $('.btnPlay').css('background-color', redBackgroundColor);
+    $('#volumeControlBtn').css('background-color', redBackgroundColor);
+    $('.circleDotBlock i').css('color', redDarkColor);
+    $('.ttTextBlock h3').css('color', redDarkColor);
+    $('.teamTxtBlock a').css('color', redColor);
+    $('.navBlocks a').hover(function () {
+        $(this).css('color', redColor);
+    }, function () {
+        $(this).css('color', '');
     });
 
-    $('#dark').click(function() {
-        setTheme('dark');
+    $('.contactBlocks a').hover(function () {
+        $(this).css('color', redColor);
+    }, function () {
+        $(this).css('color', '');
+    });
+
+    $('.mesengersContainer a').hover(function () {
+        $(this).css('color', '');
+        $(this).css('background-color', redDarkColor);
+    }, function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '');
+    });
+});
+
+$('#orange').click(function () {
+    $.cookie('theme', 'orange');
+    $('.homePage').css('background-image', 'url(./img/orangeThemeFon.jpg)');
+    $('.startDiodes').css('background-color', orangeColor);
+    $('.startDiodes').css('box-shadow', '0.1px 3px 10px' + orangeBackgroundColor);
+    $('.homeHeader').css('background-color', 'rgba(51, 51, 51, 0.3)');
+    $('.homeHeader').css('color', '#fff');
+    $('.themeBtn').css('background-color', orangeBackgroundColor);
+    $('.menuBtn').css('background-color', orangeBackgroundColor);
+    $('.btnPlay').css('background-color', orangeBackgroundColor);
+    $('#volumeControlBtn').css('background-color', orangeBackgroundColor);
+    $('.circleDotBlock i').css('color', orangeDarkColor);
+    $('.ttTextBlock h3').css('color', orangeDarkColor);
+    $('.teamTxtBlock a').css('color', orangeColor);
+    $('.navBlocks a').hover(function () {
+        $(this).css('color', orangeColor);
+    }, function () {
+        $(this).css('color', '');
+    });
+
+    $('.contactBlocks a').hover(function () {
+        $(this).css('color', orangeColor);
+    }, function () {
+        $(this).css('color', '');
+    });
+
+    $('.mesengersContainer a').hover(function () {
+        $(this).css('color', '');
+        $(this).css('background-color', orangeDarkColor);
+    }, function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '');
+    });
+});
+
+$('#blue').click(function () {
+    $.cookie('theme', 'blue');
+    $('.homePage').css('background-image', 'url(./img/blueThemeFon.jpg)');
+    $('.startDiodes').css('background-color', blueColor);
+    $('.startDiodes').css('box-shadow', '0.1px 3px 10px' + blueBackgroundColor);
+    $('.homeHeader').css('background-color', 'rgba(51, 51, 51, 0.3)');
+    $('.homeHeader').css('color', '#fff');
+    $('.themeBtn').css('background-color', blueBackgroundColor);
+    $('.menuBtn').css('background-color', blueBackgroundColor);
+    $('.btnPlay').css('background-color', blueBackgroundColor);
+    $('#volumeControlBtn').css('background-color', blueBackgroundColor);
+    $('.circleDotBlock i').css('color', blueDarkColor);
+    $('.ttTextBlock h3').css('color', blueDarkColor);
+    $('.teamTxtBlock a').css('color', blueColor);
+    $('.navBlocks a').hover(function () {
+        $(this).css('color', blueColor);
+    }, function () {
+        $(this).css('color', '');
+    });
+
+    $('.contactBlocks a').hover(function () {
+        $(this).css('color', blueColor);
+    }, function () {
+        $(this).css('color', '');
+    });
+
+    $('.mesengersContainer a').hover(function () {
+        $(this).css('color', '');
+        $(this).css('background-color', blueDarkColor);
+    }, function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '');
+    });
+});
+
+$('#dark').click(function () {
+    $.cookie('theme', 'dark');
+    $('.homePage').css('background-image', 'url(./img/themeFon.jpg)');
+    $('.wrap').css('background-color', darkColor);
+    $('.wrap').css('color', lightColor);
+    $('.aMenu').css('color', lightColor);
+    $('.teamTxtBlock a').css('color', lightColor);
+    $('.ttTextBlock h3').css('color', lightColor);
+    $('.themeBtn').css('background-color', lightColor);
+    $('.themeBtn').css('color', darkColor);
+    $('#volumeControlBtn').css('background-color', lightColor);
+    $('#volumeControlBtn').css('color', darkColor);
+    $('.menuBtn').css('background-color', lightColor);
+    $('.menuBtn').css('color', darkColor);
+    $('#colo_1').css('border', '2px solid ' + lightColor);
+    $('#colo_2').css('border', '2px solid ' + lightColor);
+    $('#colo_3').css('border', '2px solid ' + lightColor);
+    $('#colo_4').css('border', '2px solid ' + lightColor);
+    $('#colo_5').css('border', '2px solid ' + lightColor);
+    $('.ttBlock').css('box-shadow', '0 1px 5px ' + lightColor);
+    $('.teamBlock').css('box-shadow', '0 1px 5px ' + lightColor);
+    $('.homeHeader').css('background-color', 'rgba(51, 51, 51, 0.3)');
+    $('.btnPlay').css('background-color', lightColor);
+    $('.circleDotBlock i').css('color', lightColor);
+    $('.navBlocks a').hover(function () {
+        $(this).css('color', '#a1a1a1');
+    }, function () {
+        $(this).css('color', '');
+    });
+
+    $('.contactBlocks a').hover(function () {
+        $(this).css('color', '#a1a1a1');
+    }, function () {
+        $(this).css('color', '');
+    });
+
+    $('.mesengersContainer a').hover(function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '#a1a1a1');
+    }, function () {
+        $(this).css('color', '');
+        $(this).css('background-color', '');
     });
 });
