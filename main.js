@@ -158,15 +158,36 @@ $(`body`).keydown((e) => {
     }
 })
 
-$(`#vol`).on(`input`, () => {
-    audio.volume = $(`#vol`).val();
-})
-
 function rotateVinyl(degRotate) {
     timerID = setInterval(() => {
         degRotate++
         $(`.logo img`).css(`transform`, `rotate(${degRotate}deg)`)
     }, 100);
+}
+
+if ($.cookie(`audioVolume`) === undefined) {
+    $.cookie(`audioVolume`, `0.5`);
+}
+
+$(`#val`).val($.cookie(`audioVolume`));
+
+audio.volume = $.cookie(`audioVolume`);
+
+$(`#val`).on(`input`, () => {
+    $.cookie(`audioVolume`, $(`#val`).val());
+    audio.volume = $(`#val`).val();
+});
+
+if ($(`.inputContainer input`).val() == 1) {
+    $(`#volCtrlIcon`).removeClass(`fa-volume-low`);
+    $(`#volCtrlIcon`).addClass(`fa-volume-high`);
+} else if ($(`.inputContainer input`).val() == 0) {
+    $(`#volCtrlIcon`).removeClass(`fa-volume-low`);
+    $(`#volCtrlIcon`).addClass(`fa-volume-xmark`);
+} else {
+    $(`#volCtrlIcon`).removeClass(`fa-volume-high`);
+    $(`#volCtrlIcon`).removeClass(`fa-volume-xmark`);
+    $(`#volCtrlIcon`).addClass(`fa-volume-low`);
 }
 
 $(`.inputContainer input`).hide();
